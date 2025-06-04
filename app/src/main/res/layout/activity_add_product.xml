@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Nama Produk"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/textDark" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Harga"
+            android:inputType="numberDecimal"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/textDark"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etStock"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Stok"
+            android:inputType="number"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/textDark"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Kategori"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/textDark"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Simpan Produk"
+            android:backgroundTint="@color/accentColor"
+            android:textColor="@color/textLight"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

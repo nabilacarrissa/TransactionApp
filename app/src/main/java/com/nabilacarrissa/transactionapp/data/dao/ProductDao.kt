@@ -3,6 +3,7 @@ package com.nabilacarrissa.transactionapp.data.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.nabilacarrissa.transactionapp.data.model.Product
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ProductDao {
@@ -16,5 +17,5 @@ interface ProductDao {
     suspend fun delete(product: Product)
 
     @Query("SELECT * FROM products ORDER BY id DESC")
-    fun getAllProducts(): LiveData<List<Product>>
+    fun getAllProducts(): Flow<List<Product>>
 }

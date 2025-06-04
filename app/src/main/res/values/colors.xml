@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary Theme -->
+    <color name="primaryColor">#1976D2</color>
+    <color name="primaryDarkColor">#0D47A1</color>
+    <color name="accentColor">#43A047</color>
+
+    <!-- Backgrounds -->
+    <color name="backgroundLight">#F5F5F5</color>
+    <color name="neutralGray">#BDBDBD</color>
+
+    <!-- Text -->
+    <color name="textDark">#212121</color>
+    <color name="textLight">#FFFFFF</color>
+
+    <!-- Error -->
+    <color name="errorRed">#E53935</color>
 </resources>
