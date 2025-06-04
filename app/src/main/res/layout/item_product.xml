@@ -41,5 +41,15 @@
             android:textColor="@color/textDark"
             android:textSize="14sp"
             android:layout_marginTop="6dp" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Hapus"
+            android:layout_gravity="end"
+            card_view:tint="@color/errorRed" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
