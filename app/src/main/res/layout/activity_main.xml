@@ -3,13 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundLight">
+    android:background="@color/lightGray">
+
+    <!-- HEADER APP BAR -->
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/primaryBlue"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_store"
+            android:contentDescription="App Icon"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TransactionApp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/containerMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="72dp">
 
         <!-- Statistik Produk -->
         <androidx.cardview.widget.CardView
@@ -33,7 +62,8 @@
                     android:layout_weight="1"
                     android:text="Total Produk: 0"
                     android:textSize="16sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@color/textDark"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvTotalStock"
@@ -43,31 +73,33 @@
                     android:text="Total Stok: 0"
                     android:textAlignment="viewEnd"
                     android:textSize="16sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@color/textDark"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Search + Filter -->
+        <!-- Search -->
         <LinearLayout
-            android:id="@+id/llSearchFilter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp">
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="8dp"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/etSearch"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_weight="2"
                 android:hint="Cari produk..."
-                android:inputType="text"
-                android:padding="8dp"
+                android:paddingStart="40dp"
                 android:background="@drawable/bg_search"
-                android:drawableStart="@android:drawable/ic_menu_search" />
+                android:textColorHint="@color/textLight"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="12dp"
+                android:inputType="text" />
         </LinearLayout>
 
-        <!-- Daftar Produk -->
+        <!-- RecyclerView Produk -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvProducts"
             android:layout_width="match_parent"
@@ -85,7 +117,8 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="Tambah Produk"
-        app:backgroundTint="@color/primaryColor"
-        android:src="@drawable/ic_add" />
+        app:backgroundTint="@color/primaryBlue"
+        android:src="@drawable/ic_add"
+        app:elevation="6dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

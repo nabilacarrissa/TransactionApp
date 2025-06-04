@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -10,51 +11,97 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/etName"
+        <!-- HEADER -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_add_box"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/primaryColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Produk"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/textDark" />
+        </LinearLayout>
+
+        <!-- FORM INPUT -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Nama Produk"
-            android:backgroundTint="@color/primaryColor"
-            android:textColor="@color/textDark" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/etPrice"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Harga"
-            android:inputType="numberDecimal"
-            android:backgroundTint="@color/primaryColor"
-            android:textColor="@color/textDark"
-            android:layout_marginTop="12dp" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/etStock"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/textDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Stok"
-            android:inputType="number"
-            android:backgroundTint="@color/primaryColor"
-            android:textColor="@color/textDark"
-            android:layout_marginTop="12dp" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/etCategory"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/textDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Kategori"
-            android:backgroundTint="@color/primaryColor"
-            android:textColor="@color/textDark"
-            android:layout_marginTop="12dp" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TOMBOL SIMPAN -->
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:text="Simpan Produk"
-            android:backgroundTint="@color/accentColor"
+            android:textStyle="bold"
             android:textColor="@color/textLight"
-            android:layout_marginTop="20dp" />
-
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/primaryColor" />
     </LinearLayout>
 </ScrollView>

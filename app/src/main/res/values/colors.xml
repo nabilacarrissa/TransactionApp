@@ -15,4 +15,8 @@
 
     <!-- Error -->
     <color name="errorRed">#E53935</color>
+
+    <color name="primaryBlue">#3A86FF</color>
+    <color name="softGreen">#B5EAD7</color>
+    <color name="lightGray">#F4F6F8</color>
 </resources>
