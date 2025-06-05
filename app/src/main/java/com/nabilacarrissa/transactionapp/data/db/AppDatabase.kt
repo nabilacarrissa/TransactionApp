@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.nabilacarrissa.transactionapp.data.dao.ProductDao
 import com.nabilacarrissa.transactionapp.data.model.Product
 
-@Database(entities = [Product::class], version = 1, exportSchema = false)
+@Database(entities = [Product::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun productDao(): ProductDao
@@ -22,7 +22,8 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "transaction_db"
-                ).build().also { INSTANCE = it }
+                ).fallbackToDestructiveMigration()
+                    .build().also { INSTANCE = it }
             }
     }
 }
